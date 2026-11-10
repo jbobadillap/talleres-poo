@@ -1,0 +1,26 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// El enunciado lo presenta como un caso sin error, pero en realidad falla:
+// "constructor Animal in class Animal cannot be applied to given types".
+// La clase base no tiene constructor sin parametros y la subclase no llama a super.
+package taller08_herenciaSimple.ej4_usoIncorrecto;
+
+class Animal {
+
+    private String especie;
+
+    Animal(String especie) {
+        this.especie = especie;
+    }
+}
+
+public class SuperOmitido extends Animal {
+
+    public SuperOmitido(String raza) {
+        // Falta super(especie).
+        System.out.println("Raza: " + raza);
+    }
+
+    public static void main(String[] args) {
+        new SuperOmitido("Labrador");
+    }
+}

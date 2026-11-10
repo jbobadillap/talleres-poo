@@ -1,0 +1,17 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Copiar como AccesoDirectoInvalido.java dentro de este mismo paquete reproduce:
+// "precio has private access in ProductoSinAcceso".
+package taller04_private.ej3_usoIncorrecto;
+
+public class AccesoDirectoInvalido {
+
+    public static void main(String[] args) {
+        ProductoSinAcceso producto = new ProductoSinAcceso(100.0);
+
+        // Error de compilacion: precio es private y no hay getPrecio().
+        System.out.println(producto.precio);
+
+        // Error de compilacion: tampoco se puede asignar directamente.
+        producto.precio = 50.0;
+    }
+}

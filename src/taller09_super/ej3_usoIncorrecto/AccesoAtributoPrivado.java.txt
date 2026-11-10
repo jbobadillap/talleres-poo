@@ -1,0 +1,28 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "saldo has private access in Cuenta".
+package taller09_super.ej3_usoIncorrecto;
+
+class Cuenta {
+
+    private double saldo;
+
+    Cuenta(double saldo) {
+        this.saldo = saldo;
+    }
+}
+
+public class AccesoAtributoPrivado extends Cuenta {
+
+    public AccesoAtributoPrivado(double saldo) {
+        super(saldo);
+    }
+
+    public void mostrarSaldo() {
+        // Error: el atributo privado no se hereda ni es visible con super.
+        System.out.println(super.saldo);
+    }
+
+    public static void main(String[] args) {
+        new AccesoAtributoPrivado(1000).mostrarSaldo();
+    }
+}

@@ -1,0 +1,17 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "incompatible types: Animal cannot be converted to Perro".
+package taller14_polimorfismo.ej3_usoIncorrecto;
+
+class Animal {
+}
+
+class Perro extends Animal {
+}
+
+public class ReferenciaDerivadaAObjetoBase {
+
+    public static void main(String[] args) {
+        Perro miPerro = new Animal();
+        System.out.println(miPerro);
+    }
+}

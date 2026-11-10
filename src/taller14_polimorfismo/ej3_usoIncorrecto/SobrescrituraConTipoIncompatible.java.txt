@@ -1,0 +1,26 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "return type String is not compatible with int".
+package taller14_polimorfismo.ej3_usoIncorrecto;
+
+class Animal {
+
+    public int valor() {
+        return 1;
+    }
+}
+
+class Perro extends Animal {
+
+    @Override
+    public String valor() {
+        return "uno";
+    }
+}
+
+public class SobrescrituraConTipoIncompatible {
+
+    public static void main(String[] args) {
+        Perro perro = new Perro();
+        System.out.println(perro.valor());
+    }
+}

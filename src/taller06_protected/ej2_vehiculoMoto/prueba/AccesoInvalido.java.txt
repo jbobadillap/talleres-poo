@@ -1,0 +1,21 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Errores esperados:
+//   "tipo has protected access in Vehiculo"
+//   "marca has protected access in Vehiculo"
+//   "mostrarDetalles() has protected access in Vehiculo"
+// La clase no hereda de Vehiculo y esta en otro paquete.
+package taller06_protected.ej2_vehiculoMoto.prueba;
+
+import taller06_protected.ej2_vehiculoMoto.vehiculos.Vehiculo;
+
+public class AccesoInvalido {
+
+    public static void main(String[] args) {
+        Vehiculo vehiculo = new Vehiculo("Automovil", "Toyota");
+
+        // Error: no se accede desde una subclase ni desde el mismo paquete.
+        System.out.println(vehiculo.tipo);
+        System.out.println(vehiculo.marca);
+        vehiculo.mostrarDetalles();
+    }
+}

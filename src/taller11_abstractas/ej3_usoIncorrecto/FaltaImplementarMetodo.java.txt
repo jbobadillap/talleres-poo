@@ -1,0 +1,14 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "FaltaImplementarMetodo is not abstract and does not override
+// abstract method conducir() in Vehiculo".
+package taller11_abstractas.ej3_usoIncorrecto;
+
+abstract class Vehiculo {
+
+    public abstract void conducir();
+}
+
+public class FaltaImplementarMetodo extends Vehiculo {
+
+    // Falta la implementacion de conducir().
+}

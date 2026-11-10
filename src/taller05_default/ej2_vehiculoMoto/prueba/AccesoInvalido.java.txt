@@ -1,0 +1,24 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Errores esperados:
+//   "Vehiculo is not public in ...vehiculos; cannot be accessed from outside package"
+//   "Moto is not public in ...vehiculos; cannot be accessed from outside package"
+//   "tipo is not public in Vehiculo; cannot be accessed from outside package"
+package taller05_default.ej2_vehiculoMoto.prueba;
+
+import taller05_default.ej2_vehiculoMoto.vehiculos.Vehiculo;
+import taller05_default.ej2_vehiculoMoto.vehiculos.Moto;
+
+public class AccesoInvalido {
+
+    public static void main(String[] args) {
+        // Error: la clase Vehiculo tiene acceso de paquete.
+        Vehiculo vehiculo = new Vehiculo("Automovil");
+
+        // Error: tampoco se puede acceder al atributo de paquete.
+        System.out.println(vehiculo.tipo);
+
+        // Error: Moto tambien es una clase de paquete.
+        Moto moto = new Moto("Motocicleta", 250);
+        System.out.println(moto.cilindrada);
+    }
+}

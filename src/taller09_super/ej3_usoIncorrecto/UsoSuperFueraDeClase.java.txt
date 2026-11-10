@@ -1,0 +1,21 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "non-static variable super cannot be referenced from a
+// static context", porque la clase no hereda de ninguna otra y main es static.
+package taller09_super.ej3_usoIncorrecto;
+
+class Planta {
+
+    private String tipo;
+
+    Planta(String tipo) {
+        this.tipo = tipo;
+    }
+}
+
+public class UsoSuperFueraDeClase {
+
+    public static void main(String[] args) {
+        // Error: super solo existe dentro de una clase derivada.
+        super.tipo = "Orquidea";
+    }
+}

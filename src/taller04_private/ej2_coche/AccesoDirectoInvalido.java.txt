@@ -1,0 +1,18 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Copiar como AccesoDirectoInvalido.java dentro de este mismo paquete reproduce:
+// "velocidadMaxima has private access in Coche".
+package taller04_private.ej2_coche;
+
+public class AccesoDirectoInvalido {
+
+    public static void main(String[] args) {
+        Coche coche = new Coche("Toyota", "Corolla", 180);
+
+        // Error de compilacion: velocidadMaxima es private.
+        System.out.println(coche.velocidadMaxima);
+
+        // Error de compilacion: marca y modelo tambien son private.
+        System.out.println(coche.marca);
+        System.out.println(coche.modelo);
+    }
+}

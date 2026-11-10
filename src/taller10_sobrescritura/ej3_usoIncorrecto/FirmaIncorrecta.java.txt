@@ -1,0 +1,12 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "method does not override or implement a method from a supertype".
+// El metodo de la subclase no tiene la misma firma que Animal.hacerSonido().
+package taller10_sobrescritura.ej3_usoIncorrecto;
+
+public class FirmaIncorrecta extends Animal {
+
+    @Override
+    public void hacerSonido(String sonido) {
+        System.out.println("El animal dice: " + sonido);
+    }
+}

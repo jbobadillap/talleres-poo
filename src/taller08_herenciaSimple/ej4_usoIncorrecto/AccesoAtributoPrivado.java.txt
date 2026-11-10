@@ -1,0 +1,28 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "marca has private access in Vehiculo".
+package taller08_herenciaSimple.ej4_usoIncorrecto;
+
+class Vehiculo {
+
+    private String marca;
+
+    Vehiculo(String marca) {
+        this.marca = marca;
+    }
+}
+
+public class AccesoAtributoPrivado extends Vehiculo {
+
+    public AccesoAtributoPrivado(String marca) {
+        super(marca);
+    }
+
+    public void mostrarMarca() {
+        // Error: la subclase no puede acceder directamente a un atributo privado.
+        System.out.println(marca);
+    }
+
+    public static void main(String[] args) {
+        new AccesoAtributoPrivado("Toyota").mostrarMarca();
+    }
+}

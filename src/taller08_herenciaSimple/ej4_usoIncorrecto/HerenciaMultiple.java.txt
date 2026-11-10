@@ -1,0 +1,12 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "'{' expected", porque Java no permite heredar de dos clases.
+package taller08_herenciaSimple.ej4_usoIncorrecto;
+
+class ClaseA {
+}
+
+class ClaseB {
+}
+
+public class HerenciaMultiple extends ClaseA, ClaseB {
+}

@@ -1,0 +1,16 @@
+package taller13_interfacesVsAbstractas.ej1_figura;
+
+public abstract class Figura {
+
+    protected String nombre;
+
+    public Figura(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public abstract double calcularArea();
+
+    public void mostrarArea() {
+        System.out.println(nombre + " tiene area: " + calcularArea());
+    }
+}

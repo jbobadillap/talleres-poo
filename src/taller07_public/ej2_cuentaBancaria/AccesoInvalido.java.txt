@@ -1,0 +1,20 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "numeroCuenta has private access in CuentaBancaria".
+// Tambien fallaria el acceso directo a saldo.
+package taller07_public.ej2_cuentaBancaria;
+
+public class AccesoInvalido {
+
+    public static void main(String[] args) {
+        CuentaBancaria cuenta = new CuentaBancaria("AH-002-2026", 300000, "Ahorros");
+
+        // Error: numeroCuenta es private.
+        System.out.println(cuenta.numeroCuenta);
+
+        // Error: saldo tambien es private.
+        System.out.println(cuenta.saldo);
+
+        // Esto si compila porque tipoCuenta es public.
+        System.out.println(cuenta.tipoCuenta);
+    }
+}

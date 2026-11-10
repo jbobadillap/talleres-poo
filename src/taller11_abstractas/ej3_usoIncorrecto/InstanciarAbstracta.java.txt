@@ -1,0 +1,17 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "Forma is abstract; cannot be instantiated".
+package taller11_abstractas.ej3_usoIncorrecto;
+
+abstract class Forma {
+
+    public abstract void dibujar();
+}
+
+public class InstanciarAbstracta {
+
+    public static void main(String[] args) {
+        // Error: una clase abstracta no se puede instanciar.
+        Forma forma = new Forma();
+        forma.dibujar();
+    }
+}

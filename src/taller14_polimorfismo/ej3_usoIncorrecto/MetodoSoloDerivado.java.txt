@@ -1,0 +1,25 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "cannot find symbol: method correr()" en la referencia Animal.
+package taller14_polimorfismo.ej3_usoIncorrecto;
+
+class Animal {
+
+    public void hacerSonido() {
+        System.out.println("El animal hace un sonido.");
+    }
+}
+
+class Perro extends Animal {
+
+    public void correr() {
+        System.out.println("El perro esta corriendo.");
+    }
+}
+
+public class MetodoSoloDerivado {
+
+    public static void main(String[] args) {
+        Animal miAnimal = new Perro();
+        miAnimal.correr();
+    }
+}

@@ -1,0 +1,12 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "modifier default not allowed here".
+// default es propio de las interfaces. En una clase abstracta el metodo con
+// cuerpo se escribe sin esa palabra.
+package taller13_interfacesVsAbstractas.ej3_usoIncorrecto;
+
+public abstract class DefaultEnAbstracta {
+
+    public default void mostrar() {
+        System.out.println("Hola desde una clase abstracta.");
+    }
+}

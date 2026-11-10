@@ -1,0 +1,14 @@
+// EJEMPLO QUE NO COMPILA - Se guarda como .txt para no romper el proyecto.
+// Error esperado: "FaltaImplementar is not abstract and does not override
+// abstract method jugar() in Jugador".
+package taller12_interfaces.ej3_usoIncorrecto;
+
+interface Jugador {
+
+    void jugar();
+}
+
+public class FaltaImplementar implements Jugador {
+
+    // Falta la implementacion de jugar().
+}
